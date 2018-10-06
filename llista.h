@@ -18,4 +18,8 @@ typedef struct {
 
 //PROCEDIMENTS I FUNCIONS
 
-Llista llistaBIORDcrea ();
+Llista llistaBIORDcrea(); 
+llistaBIORDdestrueix (Llista * l);
+void llistaBIORDvesInici (Llista * l);
+void llistaBIORDvesFinal (Llista * l);
+

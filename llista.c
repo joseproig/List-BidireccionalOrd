@@ -21,6 +21,26 @@ Llista llistaBIORDcrea () {
 		printf ("\nError de memoria");	
 	}
 	return l;
-
 }
+llistaBIORDdestrueix (Llista * l) {
+        Node * aux;
+        aux = (Node*) malloc (sizeof(Node));
+        if (aux != NULL) {
+                while ((*l).pri != NULL) {
+                        aux = (*l).pri;
+                        (*l).pri = (*(*l).pri).seg;
+                        free (aux);
+                }
+        }
+        else {
+                printf ("\nError de memoria");
+        }
+}
+void llistaBIORDvesInici (Llista * l) {
+	(*l).pdi = (*(*l).pri).seg;
+}
+void llistaBIORDvesFinal (Llista * l) {
+	(*l).pdi = (*(*l).ult).ant;
+}
+
 
