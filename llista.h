@@ -27,3 +27,6 @@ void llistaBIORDavanca (Llista * l);
 void llistaBIORDretrocedeix (LLista * l);
 Element llistaBIORDconsulta (Llista  l);
 void llistaBIORDinsereixOrdenada (Llista * l, Element e);
+int llistaBIORDfi (Llista l);
+int llistaBIORDbuida (Llista l);
+int llistaBIORDinici (Llista l);

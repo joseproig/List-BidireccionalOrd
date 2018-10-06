@@ -95,5 +95,13 @@ void llistaBIORDinsereixOrdenat (Llista * l, Element e) {
 	}
 
 }
-
+int llistaBIORDfi (Llista  l) {
+	return *(l.pdi).seg == l.ult;
+}
+int llistaBIORDbuida (Llista l) {
+	return *(l.pri).seg == l.ult;
+}
+int llistaBIORDinici (Llista l) {
+	return l.pdi == *(l.pri).seg;
+}
 
