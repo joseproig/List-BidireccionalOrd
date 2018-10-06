@@ -61,10 +61,20 @@ void llistaBIORDesborra (Llista * l) {
 	}
 }
 void llistaBIORDavanca (Llista * l) {
-	(*l).pdi = (*(*l).pdi).seg;
-}
+        if ( (*(*l).pdi).seg != (*l).ult && (*(*l).pdi).seg != NULL) {
+                (*l).pdi = (*(*l).pdi).seg;
+        }
+        else {
+                printf ("Error, estas intentant accedir a posicions no disponibles o al fantasma");
+        }
+} 
 void llistaBIORretrocedeix (Llista * l) {
-	(*l).pdi = (*(*l).pdi).ant; 
+        if ((*(*l).pdi).ant != (*l).pri && (*(*l).pdi).ant != NULL) {
+                (*l).pdi = (*(*l).pdi).ant;
+        }
+        else {
+                printf ("\nError, estas intentant accedir a posicions no disponibles o al fantasma");
+        }
 }
 
 
