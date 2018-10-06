@@ -19,7 +19,10 @@ typedef struct {
 //PROCEDIMENTS I FUNCIONS
 
 Llista llistaBIORDcrea(); 
-llistaBIORDdestrueix (Llista * l);
+void llistaBIORDdestrueix (Llista * l);
 void llistaBIORDvesInici (Llista * l);
 void llistaBIORDvesFinal (Llista * l);
+void llistaBIORDesborra (Llista * l);
+void llistaBIORDavanca (Llista * l);
+void llistaBIORDretrocedeix (LLista * l);
 

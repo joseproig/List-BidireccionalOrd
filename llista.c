@@ -22,7 +22,7 @@ Llista llistaBIORDcrea () {
 	}
 	return l;
 }
-llistaBIORDdestrueix (Llista * l) {
+void llistaBIORDdestrueix (Llista * l) {
         Node * aux;
         aux = (Node*) malloc (sizeof(Node));
         if (aux != NULL) {
@@ -41,6 +41,30 @@ void llistaBIORDvesInici (Llista * l) {
 }
 void llistaBIORDvesFinal (Llista * l) {
 	(*l).pdi = (*(*l).ult).ant;
+}
+void llistaBIORDesborra (Llista * l) {
+	aux = (Node*) malloc (sizeof(Node));
+	if  (aux != NULL) {
+		if ( (*l).pdi != (*l).pri && (*l).pdi != (*l).ult) { 
+			aux = (*l).pdi;
+			(*((*(*l).pdi).ant)).seg = (*(*l).pdi).seg;
+			(*((*(*l).pdi).seg)).ant = (*(*l).pdi).ant;
+			(*l).pdi = (*(*l).pdi).seg;
+			free (aux);
+		}
+		else {
+			printf ("\nError, el teu PDI no esta apuntant a un lloc correcte");
+		}
+	}
+	else {
+		printf ("Error de memoria");
+	}
+}
+void llistaBIORDavanca (Llista * l) {
+	(*l).pdi = (*(*l).pdi).seg;
+}
+void llistaBIORretrocedeix (Llista * l) {
+	(*l).pdi = (*(*l).pdi).ant; 
 }
 
 
