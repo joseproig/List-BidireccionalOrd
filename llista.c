@@ -76,5 +76,24 @@ void llistaBIORretrocedeix (Llista * l) {
                 printf ("\nError, estas intentant accedir a posicions no disponibles o al fantasma");
         }
 }
+Element llistaBIORDconsulta (Llista  l) {
+	return *(l.pdi).e;
+
+}
+void llistaBIORDinsereixOrdenat (Llista * l, Element e) {
+	Node * aux;
+	int trobat;
+	if (aux != NULL) {
+		(*aux).e.edat = e.edat
+		strcpy ((*aux).e.nom_persona, e.nom_persona);
+		(*l).pdi = (*l).pri);
+		while ((*(*l).pdi).seg != (*l).ult && e.edat < (*(*l).pdi).e.edat) {	
+			(*l).pdi = (*(*l).pdi).seg;
+		}
+		(*(*(*l).pdi).seg).ant = aux;
+		(*(*l).pdi).seg = aux;
+	}
+
+}
 
 

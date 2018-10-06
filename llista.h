@@ -25,4 +25,5 @@ void llistaBIORDvesFinal (Llista * l);
 void llistaBIORDesborra (Llista * l);
 void llistaBIORDavanca (Llista * l);
 void llistaBIORDretrocedeix (LLista * l);
-
+Element llistaBIORDconsulta (Llista  l);
+void llistaBIORDinsereixOrdenada (Llista * l, Element e);
