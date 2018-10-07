@@ -1,4 +1,4 @@
-ifndef _LLISTA_H
+#ifndef _LLISTA_H
 #define _LLISTA_H
 
 typedef struct {
@@ -24,9 +24,11 @@ void llistaBIORDvesInici (Llista * l);
 void llistaBIORDvesFinal (Llista * l);
 void llistaBIORDesborra (Llista * l);
 void llistaBIORDavanca (Llista * l);
-void llistaBIORDretrocedeix (LLista * l);
+void llistaBIORDretrocedeix (Llista * l);
 Element llistaBIORDconsulta (Llista  l);
 void llistaBIORDinsereixOrdenada (Llista * l, Element e);
 int llistaBIORDfi (Llista l);
 int llistaBIORDbuida (Llista l);
 int llistaBIORDinici (Llista l);
+
+#endif

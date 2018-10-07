@@ -1,5 +1,5 @@
 programa: main.o llista.o
-	gcc -o main.o llista.o
+	gcc -g -o programa main.o llista.o
 main.o: main.c llista.c
 	gcc -c main.c
 llista.o: llista.c
